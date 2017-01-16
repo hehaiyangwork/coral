@@ -1,0 +1,46 @@
+{
+
+  "public": {
+    "path" : "./public/",
+    "components" : "public/components/",
+    "assets": "public/assets/",
+    "manifest": "public/manifest/",
+    "styles": "public/assets/styles/",
+    "scripts": "public/assets/scripts/",
+    "plugins": "public/assets/plugins/",
+    "views" : "./public/views/"
+  },
+  "components": {
+    "js": "app/components/**/*.js",
+    "scss": "app/components/**/*.scss",
+    "hbs": "app/components/**/*.hbs"
+  },
+  "app": {
+    "scssSrc": ["app/styles/**/*.{scss,css}", "app/components/**/*.scss"],
+    "template": "app/components/**/templates/*.hbs",
+    "scripts" : ["app/scripts/helper.js"],
+    "plugins" : "app/plugins/**"
+  },
+  "vendor": {
+    "init" : "./vendor/init.js",
+    "template" : ["./vendor/handlebars.js", "./vendor/helper.js"],
+    "js" : ["./vendor/extend.js", "./vendor/*/*.js"],
+    "css" : ["./vendor/*/*.{scss,css}"]
+  },
+  "file" : {
+    "app" : "app.js",
+    "appCss" : "app.css",
+    "main" : "main.js",
+    "template" : "templates.js",
+    "manifest" : "rev-manifest.json"
+  },
+  "manifest" : ["vendor/vendor.js", "vendor/build/vendor.css", "public/assets/styles/*.css", "public/assets/scripts/*.js"],
+  "revreplace" : {
+    "path" : ["app/views/layout.hbs", "app/views/no_layout.hbs"]
+  },
+  "cmd" : {
+    "vendor" : "cd vendor && git reset --hard HEAD && git clean -dxf && git pull"
+  },
+  "views": "app/views/**/*.hbs",
+  "location": "http://localhost:8100/"
+}

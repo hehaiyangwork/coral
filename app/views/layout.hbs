@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{#if seo.title}}{{seo.title}}{{else}}{{{block "title"}}}{{/if}}</title>
+    <meta name="keywords" content="{{seo.keywords}}">
+    <meta name="description" content="{{seo.description}}">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="./assets/vendor.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/app.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">您正使用<strong>过时</strong>的浏览器，因此您可能体验不到最好的效果,请点击<a href="http://browsehappy.com/">这里</a> 去升级您的浏览器</p>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <script src="https://cdn.staticfile.org/json2/20150503/json2.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://cdn.staticfile.org/jquery-placeholder/2.3.0/jquery.placeholder.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+      {{{block "body"}}}
+
+      <script type="text/javascript" src="./assets/vendor.js"></script>
+      <script type="text/javascript" src="./assets/templates.js"></script>
+      <script type="text/javascript" data-main="./assets/app.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+  </body>
+</html>
